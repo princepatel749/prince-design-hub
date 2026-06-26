@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Prince Visuals — Founded by Prince Patel. 2+ years of premium video editing, graphic design, and social media management for creators and businesses worldwide." />
+  <meta name="keywords" content="Prince Patel, Prince Visuals, About, Creative Agency, Video Editor, Graphic Designer" />
+  <meta name="author" content="Prince Patel - Prince Visuals" />
+  <meta property="og:title" content="About Prince Visuals - Premium Creative Agency" />
+  <meta property="og:description" content="Learn about Prince Patel and Prince Visuals — a world-class creative agency for influencers, creators, and brands worldwide." />
+  <meta property="og:type" content="website" />
+  <title>About | Prince Visuals - Premium Creative Agency</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Bricolage Grotesque', 'sans-serif'],
+            serif:   ['Playfair Display', 'serif'],
+            sans:    ['Inter', 'sans-serif'],
+          },
+          colors: {
+            primary:       '#1d3a8f',
+            'primary-dark':'#142b6e',
+            gold:          '#c9a227',
+            ivory:         '#FAF7F1',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
+    html { scroll-behavior: smooth; }
+    body { font-family:'Inter',sans-serif; color:#0f172a; background:#FAF7F1; overflow-x:hidden; }
+    h1,h2,h3,h4,h5,h6 { font-family:'Playfair Display',serif; }
+
+    /* Gold shimmer */
+    @keyframes shimmer-gold {
+      0%   { background-position:-200% center; }
+      100% { background-position: 200% center; }
+    }
+    .text-shimmer-gold {
+      background: linear-gradient(90deg,#f59e0b 0%,#fbbf24 20%,#fde68a 40%,#f97316 60%,#fbbf24 80%,#f59e0b 100%);
+      background-size:200% auto;
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+      background-clip:text;
+      animation: shimmer-gold 3.5s linear infinite;
+    }
+
+    /* WhatsApp ping */
+    @keyframes wa-ping { 0%{transform:scale(1);opacity:.75} 100%{transform:scale(2.2);opacity:0} }
+
+    /* Drift orbs */
+    @keyframes drift1 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(40px,-20px)} }
+    @keyframes drift2 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-30px,25px)} }
+
+    /* Stats counter grid */
+    @keyframes stat-bar-grow { from{width:0} to{width:var(--bar-w,70%)} }
+    .stat-bar-fill { animation: stat-bar-grow 1.4s cubic-bezier(.22,1,.36,1) forwards; }
+
+    /* Navbar */
+    #navbar { transition: background .3s, box-shadow .3s, padding .3s; }
+    #navbar.scrolled { background:rgba(255,255,255,.9) !important; backdrop-filter:blur(12px); box-shadow:0 1px 12px rgba(15,23,42,.08); padding-top:.75rem !important; padding-bottom:.75rem !important; }
+
+    /* Mobile nav */
+    #mobile-nav { transform:translateX(100%); transition:transform .3s ease; }
+    #mobile-nav.open { transform:translateX(0); }
+
+    /* Container */
+    .container { width:100%; max-width:1280px; margin:0 auto; padding:0 1.5rem; }
+    @media(min-width:768px){ .container { padding:0 2.5rem; } }
+
+    /* Brand gradient */
+    .brand-gradient {
+      background: linear-gradient(135deg,#b8862a 0%,#e8c56a 45%,#c9a227 75%,#a67722 100%);
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+
+    /* Stats dark section */
+    .stats-grid-line {
+      background-image:
+        linear-gradient(rgba(99,102,241,.6) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(99,102,241,.6) 1px,transparent 1px);
+      background-size:48px 48px;
+    }
+
+    /* Card hover */
+    .card-lift { transition:transform .35s ease,box-shadow .35s ease; }
+    .card-lift:hover { transform:translateY(-6px) scale(1.01); box-shadow:0 24px 48px rgba(30,23,12,.14); }
+
+    /* Film grain (dark/cinematic sections only) */
+    .film-grain { position: relative; }
+    .film-grain::after {
+      content: ''; position: absolute; inset: 0; z-index: 4; pointer-events: none;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+      opacity: .045; mix-blend-mode: overlay;
+    }
+
+    /* 3D tilt (mouse-tracked) */
+    .tilt-3d { will-change: transform; transition: transform .2s ease-out; }
+
+    /* Page-load wipe (signature edit-cut reveal, same as homepage) */
+    #page-wipe {
+      position: fixed; inset: 0; z-index: 9999; background: #0b0d12;
+      display: flex; align-items: center; justify-content: center;
+      pointer-events: none; animation: wipeUp .85s cubic-bezier(.76,0,.24,1) .4s forwards;
+    }
+    #page-wipe span {
+      font-family: 'Bricolage Grotesque', sans-serif; color: #c9a227; font-weight: 700;
+      letter-spacing: .35em; font-size: .8rem; text-transform: uppercase;
+      animation: wipeFade .4s ease .15s forwards;
+    }
+    @keyframes wipeUp  { 0% { transform: translateY(0); } 100% { transform: translateY(-100%); } }
+    @keyframes wipeFade{ 0% { opacity: .85; } 100% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      #page-wipe { display: none !important; }
+    }
+
+    /* Hero ambient cursor glow */
+    #hero-glow {
+      position: absolute; inset: 0; z-index: 15; pointer-events: none;
+      background: radial-gradient(620px circle at var(--mx,50%) var(--my,30%), rgba(201,162,39,.14), transparent 60%);
+    }
+
+    /* Form */
+    .form-input { border:1px solid #e2e8f0; border-radius:.5rem; padding:.75rem 1rem; width:100%; font-family:'Inter',sans-serif; color:#0f172a; transition:border-color .2s,box-shadow .2s; }
+    .form-input:focus { outline:none; border-color:#1d3a8f; box-shadow:0 0 0 3px rgba(29,58,143,.15); }
+    .field-error { font-size:.75rem; color:#ef4444; margin-top:.25rem; display:none; }
+    .field-error.visible { display:block; }
+    .input-error { border-color:#ef4444 !important; }
+
+    /* Timeline connector */
+    .timeline-line { position:relative; }
+    .timeline-line::before {
+      content:''; position:absolute; left:1.25rem; top:3rem; bottom:-1rem;
+      width:2px; background:linear-gradient(to bottom,#1d3a8f,#f59e0b);
+    }
+
+    /* Tooltip for floating buttons */
+    .float-btn-wrap { position:relative; }
+    .float-tooltip {
+      position:absolute; right:calc(100% + 12px); top:50%; transform:translateY(-50%);
+      background:#0f172a; color:#fff; font-size:.7rem; font-weight:600; white-space:nowrap;
+      padding:.35rem .75rem; border-radius:.5rem; pointer-events:none;
+      opacity:0; transition:opacity .2s; font-family:'Inter',sans-serif;
+    }
+    .float-tooltip::after {
+      content:''; position:absolute; left:100%; top:50%; transform:translateY(-50%);
+      border:5px solid transparent; border-left-color:#0f172a;
+    }
+    .float-btn-wrap:hover .float-tooltip { opacity:1; }
+
+    /* Quick inquiry popup */
+    #quick-popup { display:none; opacity:0; transform:translateY(12px) scale(.96); transition:opacity .25s ease,transform .25s ease; }
+    #quick-popup.open { display:block; opacity:1; transform:translateY(0) scale(1); }
+    .qi-field-error { font-size:.75rem; color:#ef4444; margin-top:.25rem; display:none; }
+    .qi-field-error.visible { display:block; }
+
+    /* Page hero gradient */
+    @keyframes heroOrb1 { 0%,100%{transform:scale(1);opacity:.25} 50%{transform:scale(1.12);opacity:.4} }
+    @keyframes heroOrb2 { 0%,100%{transform:scale(1);opacity:.2}  50%{transform:scale(1.08);opacity:.35} }
+
+    /* Skill bar */
+    @keyframes skillGrow { from{width:0} to{width:100%} }
+    .skill-bar-fill { animation:skillGrow 1.4s cubic-bezier(.22,1,.36,1) forwards; animation-play-state:paused; }
+    .skill-bar-fill.animate { animation-play-state:running; }
+
+    /* Process step hover */
+    .process-step { transition:transform .3s,box-shadow .3s; }
+    .process-step:hover { transform:translateY(-4px); box-shadow:0 16px 40px rgba(30,23,12,.12); }
+  </style>
+</head>
+
+<body class="bg-ivory text-slate-900">
+
+<!-- Signature load-in: same edit-cut wipe as the homepage -->
+<div id="page-wipe" aria-hidden="true"><span>PRINCE VISUALS</span></div>
+
+<!-- ══════════════════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════════════════ -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 py-5" style="background:transparent;">
+  <div class="container">
+    <div class="flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-2.5 z-50 relative">
+        <img src="assets/logo.png" alt="Prince Visuals Logo" class="h-10 w-10 object-contain" loading="eager" />
+        <span class="brand-gradient font-display font-bold text-lg tracking-tight leading-none">PRINCE VISUALS</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8">
+        <ul class="flex items-center gap-6">
+          <li><a href="index.html"          class="text-sm font-medium text-slate-500 hover:text-primary transition-colors">Home</a></li>
+          <li><a href="about.html"          class="text-sm font-medium text-primary border-b border-primary pb-0.5">About</a></li>
+          <li><a href="index.html#services" class="text-sm font-medium text-slate-500 hover:text-primary transition-colors">Services</a></li>
+          <li><a href="index.html#portfolio"class="text-sm font-medium text-slate-500 hover:text-primary transition-colors">Portfolio</a></li>
+          <li><a href="index.html#pricing"  class="text-sm font-medium text-slate-500 hover:text-primary transition-colors">Pricing</a></li>
+          <li><a href="index.html#reviews"  class="text-sm font-medium text-slate-500 hover:text-primary transition-colors">Reviews</a></li>
+          <li><a href="index.html#contact"  class="text-sm font-medium text-slate-500 hover:text-primary transition-colors">Contact</a></li>
+        </ul>
+        <a href="index.html#appointment"
+           class="bg-primary text-white rounded-full px-6 py-2.5 font-semibold text-sm shadow-[0_4px_14px_rgba(29,58,143,0.35)] hover:shadow-[0_6px_20px_rgba(29,58,143,0.45)] hover:-translate-y-0.5 transition-all">
+          Book Now
+        </a>
+      </nav>
+
+      <!-- Hamburger -->
+      <button id="hamburger" class="md:hidden z-50 relative p-2 text-slate-800" onclick="toggleMobileNav()" aria-label="Toggle Menu">
+        <i class="fas fa-bars text-xl" id="ham-icon"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<div id="mobile-nav" class="fixed inset-0 bg-ivory z-40 flex flex-col justify-center items-center md:hidden">
+  <ul class="flex flex-col items-center gap-8 text-xl">
+    <li><a href="index.html"           onclick="closeMobileNav()" class="font-display font-medium text-slate-800 hover:text-primary transition-colors">Home</a></li>
+    <li><a href="about.html"           onclick="closeMobileNav()" class="font-display font-medium text-primary">About</a></li>
+    <li><a href="index.html#services"  onclick="closeMobileNav()" class="font-display font-medium text-slate-800 hover:text-primary transition-colors">Services</a></li>
+    <li><a href="index.html#portfolio" onclick="closeMobileNav()" class="font-display font-medium text-slate-800 hover:text-primary transition-colors">Portfolio</a></li>
+    <li><a href="index.html#pricing"   onclick="closeMobileNav()" class="font-display font-medium text-slate-800 hover:text-primary transition-colors">Pricing</a></li>
+    <li><a href="index.html#reviews"   onclick="closeMobileNav()" class="font-display font-medium text-slate-800 hover:text-primary transition-colors">Reviews</a></li>
+    <li><a href="index.html#contact"   onclick="closeMobileNav()" class="font-display font-medium text-slate-800 hover:text-primary transition-colors">Contact</a></li>
+    <li>
+      <a href="index.html#appointment" onclick="closeMobileNav()"
+         class="bg-primary text-white rounded-full px-8 py-3 font-bold mt-4 inline-block">
+        Book Appointment
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     PAGE HERO — ABOUT
+══════════════════════════════════════════════════════ -->
+<section id="about-hero" class="relative min-h-[60vh] flex items-end pb-20 pt-40 overflow-hidden bg-black film-grain">
+
+  <!-- Background -->
+  <div class="absolute inset-0 z-0">
+    <div class="absolute inset-0 z-10" style="background:linear-gradient(to bottom,rgba(0,0,0,.7) 0%,rgba(0,0,0,.5) 50%,rgba(0,0,0,.85) 100%)"></div>
+    <img src="assets/about.png" alt="About Prince Visuals" class="w-full h-full object-cover opacity-60" loading="eager" />
+  </div>
+
+  <!-- Ambient orbs -->
+  <div class="absolute inset-0 z-10 pointer-events-none overflow-hidden">
+    <div style="position:absolute;top:20%;left:15%;width:24rem;height:24rem;background:rgba(29,58,143,.25);border-radius:50%;filter:blur(120px);animation:heroOrb1 8s ease-in-out infinite;"></div>
+    <div style="position:absolute;bottom:10%;right:15%;width:20rem;height:20rem;background:rgba(245,158,11,.2);border-radius:50%;filter:blur(100px);animation:heroOrb2 10s ease-in-out 2s infinite;"></div>
+  </div>
+
+  <!-- Cursor-tracked gold glow -->
+  <div id="hero-glow"></div>
+
+  <div class="container relative z-20">
+    <div class="max-w-3xl">
+      <!-- Breadcrumb -->
+      <div class="flex items-center gap-2 text-white/50 text-sm mb-6" data-aos="fade-up" data-aos-delay="50">
+        <a href="index.html" class="hover:text-white transition-colors">Home</a>
+        <i class="fas fa-chevron-right text-xs"></i>
+        <span class="text-white">About</span>
+      </div>
+
+      <div class="inline-block mb-5" data-aos="fade-up" data-aos-delay="100">
+        <span class="inline-block px-5 py-2 rounded-full border border-white/20 text-white/90 text-xs font-semibold tracking-[0.3em] uppercase" style="background:rgba(255,255,255,.1);backdrop-filter:blur(12px);">
+          Our Story
+        </span>
+      </div>
+
+      <h1 class="font-display font-bold text-white mb-5 leading-[0.98] tracking-tight" style="font-size:clamp(2.75rem,7vw,5.25rem);" data-aos="fade-up" data-aos-delay="180">
+        The Team Behind<br/>
+        <span class="text-shimmer-gold">Prince Visuals</span>
+      </h1>
+
+      <p class="text-gray-300/90 max-w-xl font-light leading-relaxed" style="font-size:clamp(1rem,2vw,1.15rem);" data-aos="fade-up" data-aos-delay="280">
+        A premium creative agency built on passion, precision, and a relentless drive to make every frame count.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     STATS BAR
+══════════════════════════════════════════════════════ -->
+<section class="relative overflow-hidden py-20 film-grain" style="background:linear-gradient(135deg,#0a0f2e 0%,#0d1117 40%,#12022f 100%);">
+  <div class="absolute inset-0 stats-grid-line pointer-events-none" style="opacity:.07;"></div>
+  <div style="position:absolute;top:0;left:25%;width:24rem;height:24rem;background:rgba(59,130,246,.15);border-radius:50%;filter:blur(120px);animation:drift1 18s ease-in-out infinite;pointer-events:none;"></div>
+  <div style="position:absolute;bottom:0;right:25%;width:18rem;height:18rem;background:rgba(168,85,247,.12);border-radius:50%;filter:blur(100px);animation:drift2 22s ease-in-out 4s infinite;pointer-events:none;"></div>
+
+  <div class="container relative z-10">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6">
+
+      <div class="flex flex-col items-center text-center stat-card" data-target="2" data-aos="fade-up" data-aos-delay="0">
+        <div class="text-5xl md:text-6xl font-bold font-display mb-2 tabular-nums">
+          <span class="stat-num text-amber-400">0</span><span class="text-amber-400">+</span>
+        </div>
+        <p class="text-white font-semibold text-base mb-1">Years Experience</p>
+        <p class="text-white/45 text-sm">Industry mastery since day one</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center stat-card" data-target="500" data-aos="fade-up" data-aos-delay="120">
+        <div class="text-5xl md:text-6xl font-bold font-display mb-2 tabular-nums">
+          <span class="stat-num text-amber-400">0</span><span class="text-amber-400">+</span>
+        </div>
+        <p class="text-white font-semibold text-base mb-1">Projects Delivered</p>
+        <p class="text-white/45 text-sm">Reels, videos &amp; designs</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center stat-card" data-target="100" data-aos="fade-up" data-aos-delay="240">
+        <div class="text-5xl md:text-6xl font-bold font-display mb-2 tabular-nums">
+          <span class="stat-num text-amber-400">0</span><span class="text-amber-400">+</span>
+        </div>
+        <p class="text-white font-semibold text-base mb-1">Happy Clients</p>
+        <p class="text-white/45 text-sm">Creators &amp; businesses</p>
+      </div>
+
+      <div class="flex flex-col items-center text-center stat-card" data-target="50" data-aos="fade-up" data-aos-delay="360">
+        <div class="text-5xl md:text-6xl font-bold font-display mb-2 tabular-nums">
+          <span class="stat-num text-amber-400">0</span><span class="text-amber-400">+</span>
+        </div>
+        <p class="text-white font-semibold text-base mb-1">Countries Reached</p>
+        <p class="text-white/45 text-sm">Worldwide client base</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     FOUNDER STORY
+══════════════════════════════════════════════════════ -->
+<section class="py-24 md:py-32 bg-ivory relative overflow-hidden">
+  <div class="container">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Image -->
+      <div class="relative order-2 lg:order-1" data-aos="fade-right">
+        <div class="tilt-3d tilt-strong aspect-[4/5] rounded-2xl overflow-hidden relative z-10 shadow-2xl">
+          <img src="assets/about.png" alt="Prince Patel - Founder of Prince Visuals" class="w-full h-full object-cover" loading="lazy" decoding="async" />
+          <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(0,0,0,.5),transparent 60%)"></div>
+          <!-- Name card overlay -->
+          <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl" style="background:rgba(255,255,255,.12);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.2);">
+            <p class="text-white font-bold text-lg font-display">Prince Patel</p>
+            <p class="text-white/70 text-sm">Founder &amp; Creative Director</p>
+          </div>
+        </div>
+        <!-- Decorative rings -->
+        <div class="absolute -top-6 -left-6 w-32 h-32 rounded-full blur-2xl z-0" style="background:rgba(29,58,143,.1)"></div>
+        <div class="absolute -bottom-6 -right-6 w-40 h-40 rounded-full blur-3xl z-0" style="background:rgba(245,158,11,.2)"></div>
+        <div class="absolute top-1/2 -right-8 -translate-y-1/2 w-16 h-64 border border-primary/20 rounded-full z-0 hidden md:block"></div>
+        <!-- Experience badge -->
+        <div class="absolute -top-4 -right-4 w-20 h-20 rounded-full flex flex-col items-center justify-center text-center z-20 shadow-xl" style="background:linear-gradient(135deg,#1d3a8f,#0d47a1);">
+          <span class="text-white font-bold text-xl font-display leading-none">2+</span>
+          <span class="text-white/80 text-[9px] font-medium uppercase tracking-wide leading-none mt-0.5">Years</span>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="flex flex-col justify-center order-1 lg:order-2" data-aos="fade-left" data-aos-delay="150">
+        <div class="inline-flex items-center gap-2 mb-4">
+          <div class="h-px w-8 bg-amber-500"></div>
+          <span class="text-amber-600 font-semibold tracking-wider text-sm uppercase">About The Founder</span>
+        </div>
+
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6 leading-tight">
+          Crafting Digital<br/>
+          <span class="text-primary italic">Masterpieces</span>
+        </h2>
+
+        <p class="text-lg text-slate-600 mb-5 font-light leading-relaxed">
+          Founded by <strong class="text-slate-900 font-semibold">Prince Patel</strong>, Prince Visuals is a premier creative agency dedicated to elevating brands in the digital space. With over two years of intensive industry experience, we have mastered the art of visual storytelling.
+        </p>
+        <p class="text-lg text-slate-600 mb-5 font-light leading-relaxed">
+          What started as a passion for video editing evolved into a full-service creative studio serving influencers, content creators, YouTubers, Instagram creators, and global businesses. Every project is treated with the same care and precision — regardless of size or budget.
+        </p>
+        <p class="text-lg text-slate-600 mb-10 font-light leading-relaxed">
+          We specialize in high-end video editing, striking graphic design, and strategic social media management. Our mission is to transform raw ideas into viral, scroll-stopping content that drives real engagement and growth for creators and businesses worldwide.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <a href="index.html#appointment"
+             class="inline-flex items-center gap-2 bg-primary text-white rounded-full px-7 py-3 font-semibold transition-all hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(29,58,143,0.35)]">
+            <i class="fas fa-calendar-check"></i> Book a Consultation
+          </a>
+          <a href="index.html#portfolio"
+             class="inline-flex items-center gap-2 border border-slate-200 text-slate-700 rounded-full px-7 py-3 font-semibold transition-all hover:-translate-y-0.5 hover:border-primary hover:text-primary">
+            <i class="fas fa-play-circle"></i> View Portfolio
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     MISSION & VISION
+══════════════════════════════════════════════════════ -->
+<section class="py-20 md:py-28 bg-ivory">
+  <div class="container">
+    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+      <span class="text-primary font-semibold tracking-wider text-sm uppercase mb-4 block">What Drives Us</span>
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-4">Mission &amp; Vision</h2>
+      <p class="text-slate-600 font-light">Every project we take on is guided by a clear purpose and a bold ambition.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+
+      <div class="bg-white p-10 rounded-3xl border border-slate-100 shadow-sm card-lift" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-6">
+          <i class="fas fa-crosshairs text-primary text-2xl"></i>
+        </div>
+        <h3 class="text-2xl font-serif font-bold text-slate-900 mb-4">Our Mission</h3>
+        <p class="text-slate-600 leading-relaxed font-light">
+          To empower creators and businesses with world-class visual content that commands attention, builds audience trust, and drives measurable growth — delivered affordably and at premium quality.
+        </p>
+      </div>
+
+      <div class="bg-white p-10 rounded-3xl border border-slate-100 shadow-sm card-lift" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-14 h-14 rounded-2xl bg-amber-50 flex items-center justify-center mb-6">
+          <i class="fas fa-eye text-amber-500 text-2xl"></i>
+        </div>
+        <h3 class="text-2xl font-serif font-bold text-slate-900 mb-4">Our Vision</h3>
+        <p class="text-slate-600 leading-relaxed font-light">
+          Prince Visuals aims to become a world-class creative agency helping creators and brands grow through powerful visual content and digital branding — recognized globally for excellence and innovation.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     EXPERTISE / SKILLS
+══════════════════════════════════════════════════════ -->
+<section class="py-20 md:py-28 bg-ivory">
+  <div class="container">
+    <div class="grid lg:grid-cols-2 gap-16 items-center max-w-5xl mx-auto">
+
+      <div data-aos="fade-right">
+        <span class="text-primary font-semibold tracking-wider text-sm uppercase mb-4 block">Core Expertise</span>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-6">Skills &amp; Proficiency</h2>
+        <p class="text-slate-600 font-light leading-relaxed mb-10">
+          Every skill listed here is battle-tested across hundreds of real client projects — from indie creators to established brands.
+        </p>
+
+        <div class="space-y-6" id="skills-container">
+
+          <div class="skill-item">
+            <div class="flex justify-between mb-2">
+              <span class="font-semibold text-slate-800 text-sm">Video Editing</span>
+              <span class="text-primary font-bold text-sm">95%</span>
+            </div>
+            <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+              <div class="skill-bar-fill h-2 rounded-full" style="--bar-w:95%;width:0;background:linear-gradient(90deg,#1d3a8f,#f59e0b);"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="flex justify-between mb-2">
+              <span class="font-semibold text-slate-800 text-sm">Graphic Design</span>
+              <span class="text-primary font-bold text-sm">88%</span>
+            </div>
+            <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+              <div class="skill-bar-fill h-2 rounded-full" style="--bar-w:88%;width:0;background:linear-gradient(90deg,#1d3a8f,#f59e0b);"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="flex justify-between mb-2">
+              <span class="font-semibold text-slate-800 text-sm">Reels &amp; Short-form Content</span>
+              <span class="text-primary font-bold text-sm">97%</span>
+            </div>
+            <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+              <div class="skill-bar-fill h-2 rounded-full" style="--bar-w:97%;width:0;background:linear-gradient(90deg,#1d3a8f,#f59e0b);"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="flex justify-between mb-2">
+              <span class="font-semibold text-slate-800 text-sm">Social Media Strategy</span>
+              <span class="text-primary font-bold text-sm">82%</span>
+            </div>
+            <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+              <div class="skill-bar-fill h-2 rounded-full" style="--bar-w:82%;width:0;background:linear-gradient(90deg,#1d3a8f,#f59e0b);"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="flex justify-between mb-2">
+              <span class="font-semibold text-slate-800 text-sm">Branding &amp; Identity</span>
+              <span class="text-primary font-bold text-sm">85%</span>
+            </div>
+            <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+              <div class="skill-bar-fill h-2 rounded-full" style="--bar-w:85%;width:0;background:linear-gradient(90deg,#1d3a8f,#f59e0b);"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div data-aos="fade-left" data-aos-delay="150">
+        <div class="grid grid-cols-2 gap-5">
+
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 card-lift">
+            <i class="fas fa-film text-primary text-2xl mb-4 block"></i>
+            <h4 class="font-bold text-slate-900 mb-2">Video Tools</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">Adobe Premiere Pro, After Effects, CapCut, DaVinci Resolve</p>
+          </div>
+
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 card-lift">
+            <i class="fas fa-palette text-amber-500 text-2xl mb-4 block"></i>
+            <h4 class="font-bold text-slate-900 mb-2">Design Tools</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">Photoshop, Illustrator, Canva, Figma</p>
+          </div>
+
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 card-lift">
+            <i class="fab fa-instagram text-pink-500 text-2xl mb-4 block"></i>
+            <h4 class="font-bold text-slate-900 mb-2">Platforms</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">Instagram, YouTube, TikTok, Facebook, Twitter/X</p>
+          </div>
+
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 card-lift">
+            <i class="fas fa-globe text-green-500 text-2xl mb-4 block"></i>
+            <h4 class="font-bold text-slate-900 mb-2">Client Reach</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">India, UAE, USA, UK, Canada, Europe &amp; beyond</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     SERVICES (FULL DETAIL)
+══════════════════════════════════════════════════════ -->
+<section class="py-20 md:py-28 bg-slate-900 text-white relative film-grain">
+  <div class="container">
+
+    <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+      <span class="text-amber-500 font-semibold tracking-wider text-sm uppercase mb-4 block">What We Offer</span>
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Our Full Service Range</h2>
+      <p class="text-slate-400 font-light">Everything you need to build, grow, and dominate your digital presence.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Video Editing -->
+      <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 card-lift tilt-3d" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-16 h-16 rounded-2xl bg-blue-900/50 flex items-center justify-center mb-6">
+          <i class="fas fa-film text-primary text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-serif font-bold text-white mb-4">Video Editing</h3>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-3 text-slate-300 text-sm"><i class="fas fa-check text-amber-400 text-xs shrink-0"></i>Reels Editing (15s / 30s / 60s)</li>
+          <li class="flex items-center gap-3 text-slate-300 text-sm"><i class="fas fa-check text-amber-400 text-xs shrink-0"></i>YouTube Video Editing</li>
+          <li class="flex items-center gap-3 text-slate-300 text-sm"><i class="fas fa-check text-amber-400 text-xs shrink-0"></i>Shorts Editing</li>
+          <li class="flex items-center gap-3 text-slate-300 text-sm"><i class="fas fa-check text-amber-400 text-xs shrink-0"></i>Cinematic Editing</li>
+          <li class="flex items-center gap-3 text-slate-300 text-sm"><i class="fas fa-check text-amber-400 text-xs shrink-0"></i>Promotional Videos</li>
+          <li class="flex items-center gap-3 text-slate-300 text-sm"><i class="fas fa-check text-amber-400 text-xs shrink-0"></i>Business Videos</li>
+        </ul>
+        <a href="index.html#appointment" class="mt-8 inline-flex items-center gap-2 text-primary text-sm font-semibold hover:text-amber-400 transition-colors">
+          Book This Service <i class="fas fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+      <!-- Graphic Design -->
+      <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 card-lift tilt-3d" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-16 h-16 rounded-2xl bg-amber-900/30 flex items-center justify-center mb-6">
+          <i class="fas fa-palette text-amber-400 text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-serif font-bold text-white mb-4">Graphic Design</h3>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-3 text-slate-300 text-sm"><i class="fas fa-check text-amber-400 text-xs shrink-0"></i>Social Media Posts</li>
+          <li class="flex items-center gap-3 text-slate-300 text-sm"><i class="fas fa-check text-amber-400 text-xs shrink-0"></i>Thumbnails</li>
+          <li class="flex items-center gap-3 text-slate-300 text-sm"><i class="fas fa-check text-amber-400 text-xs shrink-0"></i>Posters &amp; Banners</li>
+          <li class="flex items-center gap-3 text-slate-300 text-sm"><i class="fas fa-check text-amber-400 text-xs shrink-0"></i>Branding Designs</li>
+          <li class="flex items-center gap-3 text-slate-300 text-sm"><i class="fas fa-check text-amber-400 text-xs shrink-0"></i>Marketing Creatives</li>
+          <li class="flex items-center gap-3 text-slate-300 text-sm"><i class="fas fa-check text-amber-400 text-xs shrink-0"></i>Logo &amp; Identity</li>
+        </ul>
+        <a href="index.html#appointment" class="mt-8 inline-flex items-center gap-2 text-amber-400 text-sm font-semibold hover:text-primary transition-colors">
+          Book This Service <i class="fas fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+      <!-- Social Media Management -->
+      <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 card-lift tilt-3d" data-aos="fade-up" data-aos-delay="300">
+        <div class="w-16 h-16 rounded-2xl bg-green-900/30 flex items-center justify-center mb-6">
+          <i class="fas fa-mobile-alt text-green-400 text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-serif font-bold text-white mb-4">Social Media Management</h3>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-3 text-slate-300 text-sm"><i class="fas fa-check text-amber-400 text-xs shrink-0"></i>Content Planning</li>
+          <li class="flex items-center gap-3 text-slate-300 text-sm"><i class="fas fa-check text-amber-400 text-xs shrink-0"></i>Page Management</li>
+          <li class="flex items-center gap-3 text-slate-300 text-sm"><i class="fas fa-check text-amber-400 text-xs shrink-0"></i>Branding Strategy</li>
+          <li class="flex items-center gap-3 text-slate-300 text-sm"><i class="fas fa-check text-amber-400 text-xs shrink-0"></i>Growth Support</li>
+          <li class="flex items-center gap-3 text-slate-300 text-sm"><i class="fas fa-check text-amber-400 text-xs shrink-0"></i>Analytics &amp; Reporting</li>
+          <li class="flex items-center gap-3 text-slate-300 text-sm"><i class="fas fa-check text-amber-400 text-xs shrink-0"></i>Hashtag &amp; SEO Strategy</li>
+        </ul>
+        <a href="index.html#appointment" class="mt-8 inline-flex items-center gap-2 text-green-400 text-sm font-semibold hover:text-primary transition-colors">
+          Book This Service <i class="fas fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     HOW WE WORK (PROCESS)
+══════════════════════════════════════════════════════ -->
+<section class="py-20 md:py-28 bg-ivory">
+  <div class="container">
+
+    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+      <span class="text-primary font-semibold tracking-wider text-sm uppercase mb-4 block">Our Process</span>
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-4">How We Work</h2>
+      <p class="text-slate-600 font-light">A simple, transparent 4-step process from first inquiry to final delivery.</p>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+
+      <div class="process-step bg-white p-7 rounded-2xl border border-slate-100 shadow-sm text-center" data-aos="fade-up" data-aos-delay="50">
+        <div class="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-5 text-xl font-bold font-display">1</div>
+        <h4 class="font-bold text-slate-900 mb-2">Inquiry</h4>
+        <p class="text-sm text-slate-500 leading-relaxed">You reach out via WhatsApp or the booking form with your project details.</p>
+      </div>
+
+      <div class="process-step bg-white p-7 rounded-2xl border border-slate-100 shadow-sm text-center" data-aos="fade-up" data-aos-delay="150">
+        <div class="w-14 h-14 rounded-full bg-amber-400/15 text-amber-500 flex items-center justify-center mx-auto mb-5 text-xl font-bold font-display">2</div>
+        <h4 class="font-bold text-slate-900 mb-2">Brief</h4>
+        <p class="text-sm text-slate-500 leading-relaxed">We discuss your vision, goals, style preferences, and timeline in detail.</p>
+      </div>
+
+      <div class="process-step bg-white p-7 rounded-2xl border border-slate-100 shadow-sm text-center" data-aos="fade-up" data-aos-delay="250">
+        <div class="w-14 h-14 rounded-full bg-blue-50 text-primary flex items-center justify-center mx-auto mb-5 text-xl font-bold font-display">3</div>
+        <h4 class="font-bold text-slate-900 mb-2">Creation</h4>
+        <p class="text-sm text-slate-500 leading-relaxed">Our team crafts your content with care, creativity, and premium-level execution.</p>
+      </div>
+
+      <div class="process-step bg-white p-7 rounded-2xl border border-slate-100 shadow-sm text-center" data-aos="fade-up" data-aos-delay="350">
+        <div class="w-14 h-14 rounded-full bg-green-50 text-green-600 flex items-center justify-center mx-auto mb-5 text-xl font-bold font-display">4</div>
+        <h4 class="font-bold text-slate-900 mb-2">Delivery</h4>
+        <p class="text-sm text-slate-500 leading-relaxed">You receive the final files on time, review, and request revisions if needed.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     WHY CHOOSE US
+══════════════════════════════════════════════════════ -->
+<section class="py-20 bg-ivory border-t border-slate-100">
+  <div class="container">
+    <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-4">Why Choose Prince Visuals?</h2>
+      <p class="text-slate-600 font-light">The advantages of partnering with a premium creative agency.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center card-lift" data-aos="fade-up" data-aos-delay="50">
+        <div class="w-12 h-12 bg-blue-50 text-primary rounded-full flex items-center justify-center mb-4"><i class="fas fa-wallet text-lg"></i></div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">Affordable Pricing</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">Premium quality that fits your budget.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center card-lift" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-12 h-12 bg-blue-50 text-primary rounded-full flex items-center justify-center mb-4"><i class="fas fa-star text-lg"></i></div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">Professional Quality</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">Cinematic, high-end output for every project.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center card-lift" data-aos="fade-up" data-aos-delay="150">
+        <div class="w-12 h-12 bg-blue-50 text-primary rounded-full flex items-center justify-center mb-4"><i class="fas fa-bolt text-lg"></i></div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">Fast Delivery</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">Quick turnaround without compromise.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center card-lift" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-12 h-12 bg-blue-50 text-primary rounded-full flex items-center justify-center mb-4"><i class="fas fa-users text-lg"></i></div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">Team Support</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">Dedicated creative team for your brand.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center card-lift" data-aos="fade-up" data-aos-delay="250">
+        <div class="w-12 h-12 bg-blue-50 text-primary rounded-full flex items-center justify-center mb-4"><i class="fas fa-paint-brush text-lg"></i></div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">Creative Style</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">Unique, trend-setting editing approaches.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center card-lift" data-aos="fade-up" data-aos-delay="300">
+        <div class="w-12 h-12 bg-blue-50 text-primary rounded-full flex items-center justify-center mb-4"><i class="fas fa-chart-line text-lg"></i></div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">Growth Focus</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">Content optimized for maximum engagement.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center card-lift" data-aos="fade-up" data-aos-delay="350">
+        <div class="w-12 h-12 bg-blue-50 text-primary rounded-full flex items-center justify-center mb-4"><i class="fas fa-globe text-lg"></i></div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">Worldwide Service</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">Serving clients across the globe.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     CTA STRIP
+══════════════════════════════════════════════════════ -->
+<section class="py-20 relative overflow-hidden film-grain" style="background:linear-gradient(135deg,#0d1117 0%,#0a0f2e 100%);">
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40rem;height:40rem;background:rgba(29,58,143,.15);border-radius:50%;filter:blur(120px);pointer-events:none;"></div>
+  <div class="container relative z-10 text-center">
+    <h2 class="font-display font-bold text-white mb-4" style="font-size:clamp(1.8rem,4vw,3rem);" data-aos="fade-up">
+      Ready to Elevate Your Brand?
+    </h2>
+    <p class="text-slate-400 font-light mb-10 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+      Let's build something extraordinary together. Book a consultation today and transform your ideas into viral visual content.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+      <a href="index.html#appointment"
+         class="btn-pulse-glow w-full sm:w-auto inline-flex items-center justify-center gap-2 h-14 px-10 bg-gold text-slate-900 rounded-full font-bold text-lg transition-transform hover:-translate-y-1"
+         style="animation:pulse-glow-blue 2.2s ease-in-out infinite;">
+        <i class="fas fa-calendar-check"></i> Book Appointment
+      </a>
+      <a href="https://wa.me/919054215316" target="_blank" rel="noopener noreferrer"
+         class="w-full sm:w-auto inline-flex items-center justify-center gap-2 h-14 px-10 rounded-full font-semibold text-lg text-white border border-white/20 transition-transform hover:-translate-y-1"
+         style="background:rgba(255,255,255,.08);">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════ -->
+<footer class="bg-black text-white pt-20 pb-10 border-t border-slate-800 relative film-grain">
+  <div class="container">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+      <div class="lg:col-span-2">
+        <a href="index.html" class="flex items-center gap-3 mb-6">
+          <img src="assets/logo.png" alt="Prince Visuals Logo" class="h-12 w-12 object-contain" />
+          <span class="font-serif font-bold text-2xl tracking-wide text-white">PRINCE VISUALS</span>
+        </a>
+        <p class="text-slate-400 font-light text-lg mb-6 max-w-md">Transforming Ideas Into Viral Visual Content</p>
+        <p class="text-slate-500 font-light text-sm max-w-md leading-relaxed">
+          Prince Visuals aims to become a world-class creative agency helping creators and brands grow through powerful visual content and digital branding.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-white mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
+        <ul class="space-y-4">
+          <li><a href="index.html"          class="text-slate-400 hover:text-amber-400 transition-colors">Home</a></li>
+          <li><a href="about.html"          class="text-slate-400 hover:text-amber-400 transition-colors">About</a></li>
+          <li><a href="index.html#services" class="text-slate-400 hover:text-amber-400 transition-colors">Services</a></li>
+          <li><a href="index.html#portfolio"class="text-slate-400 hover:text-amber-400 transition-colors">Portfolio</a></li>
+          <li><a href="index.html#pricing"  class="text-slate-400 hover:text-amber-400 transition-colors">Pricing</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-white mb-6 uppercase tracking-wider text-sm">Connect</h4>
+        <ul class="space-y-4">
+          <li><a href="index.html#contact"                      class="text-slate-400 hover:text-amber-400 transition-colors">Contact Us</a></li>
+          <li><a href="https://wa.me/919054215316" target="_blank" class="text-slate-400 hover:text-amber-400 transition-colors">WhatsApp</a></li>
+          <li><a href="mailto:mrprince742009@gmail.com"          class="text-slate-400 hover:text-amber-400 transition-colors">Email Us</a></li>
+          <li class="flex gap-4 mt-6">
+            <a href="https://instagram.com/.prince.ptel." target="_blank" class="text-slate-400 hover:text-white transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+            <a href="https://youtube.com"                  target="_blank" class="text-slate-400 hover:text-white transition-colors"><i class="fab fa-youtube text-xl"></i></a>
+            <a href="https://wa.me/919054215316"           target="_blank" class="text-slate-400 hover:text-white transition-colors"><i class="fab fa-whatsapp text-xl"></i></a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-slate-500 text-sm">&copy; <span id="copy-year"></span> Prince Visuals. All rights reserved.</p>
+      <div class="flex gap-6 text-sm text-slate-500">
+        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════════════
+     FLOATING BUTTONS
+══════════════════════════════════════════════════════ -->
+<div class="fixed bottom-6 right-6 z-40 flex flex-col items-center gap-3">
+  <div class="float-btn-wrap">
+    <span class="float-tooltip">Call Now</span>
+    <a href="tel:+919054215316"
+       class="w-[52px] h-[52px] rounded-full flex items-center justify-center text-white transition-transform hover:scale-110 active:scale-95"
+       style="background:#1d3a8f;box-shadow:0 4px 20px rgba(29,58,143,.45);">
+      <i class="fas fa-phone"></i>
+    </a>
+  </div>
+  <div class="float-btn-wrap">
+    <span class="float-tooltip">Chat on WhatsApp</span>
+    <a href="https://wa.me/919054215316" target="_blank" rel="noopener noreferrer"
+       class="relative w-[56px] h-[56px] rounded-full flex items-center justify-center text-white transition-transform hover:scale-110 active:scale-95"
+       style="background:#25D366;box-shadow:0 4px 20px rgba(37,211,102,.45);">
+      <span style="position:absolute;inset:0;border-radius:50%;background:#25D366;animation:wa-ping 2s ease-out infinite;opacity:.4;"></span>
+      <i class="fab fa-whatsapp text-2xl relative z-10"></i>
+    </a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     QUICK INQUIRY WIDGET
+══════════════════════════════════════════════════════ -->
+<div class="fixed z-50 flex flex-col items-end" style="bottom:9.5rem;right:1.5rem;">
+  <div id="quick-popup" class="mb-3 w-[300px]" style="border-radius:1rem;overflow:hidden;background:rgba(255,255,255,.95);backdrop-filter:blur(20px);border:1px solid #e2e8f0;box-shadow:0 25px 50px rgba(15,23,42,.2);">
+    <div class="bg-primary text-white p-4 flex justify-between items-center">
+      <h4 class="font-bold font-serif text-lg">Quick Inquiry</h4>
+      <button onclick="closeQuick()" class="hover:bg-white/20 p-1 rounded-full transition-colors"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="p-5 space-y-4">
+      <div>
+        <input id="qi-name" type="text" placeholder="Your Name" oninput="validateQuick()"
+          class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-slate-900 text-sm" style="border:1px solid #e2e8f0;" />
+        <p class="qi-field-error" id="qi-err-name">Name is required.</p>
+      </div>
+      <div>
+        <input id="qi-contact" type="text" placeholder="Phone or Email" oninput="validateQuick()"
+          class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-slate-900 text-sm" style="border:1px solid #e2e8f0;" />
+        <p class="qi-field-error" id="qi-err-contact">Enter valid 10-digit phone or email.</p>
+      </div>
+      <div>
+        <textarea id="qi-message" rows="3" placeholder="What do you need help with?" oninput="validateQuick()"
+          class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-slate-900 text-sm resize-none" style="border:1px solid #e2e8f0;"></textarea>
+        <p class="qi-field-error" id="qi-err-msg">Minimum 5 characters required.</p>
+      </div>
+      <button id="qi-submit" onclick="submitQuick()" disabled
+        class="w-full bg-primary text-white rounded-xl py-2.5 font-semibold text-sm flex items-center justify-center gap-2 disabled:opacity-50 transition-opacity">
+        <i class="fab fa-whatsapp"></i> Send to WhatsApp
+      </button>
+    </div>
+  </div>
+  <button onclick="toggleQuick()"
+    class="bg-white text-slate-900 border border-slate-200 shadow-xl px-5 py-3 rounded-full flex items-center gap-2 font-medium hover:bg-slate-50 transition-colors text-sm">
+    <i class="fas fa-comment-dots text-primary"></i> Quick Inquiry
+  </button>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════════════════════ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+/* Init */
+AOS.init({ once:true, duration:700, easing:'ease-out' });
+document.getElementById('copy-year').textContent = new Date().getFullYear();
+
+/* Navbar scroll */
+let navTimer;
+window.addEventListener('scroll', function(){
+  clearTimeout(navTimer);
+  navTimer = setTimeout(function(){
+    const nav = document.getElementById('navbar');
+    if(window.scrollY > 20) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }, 50);
+}, { passive:true });
+
+/* Mobile nav */
+function toggleMobileNav(){
+  const mn = document.getElementById('mobile-nav');
+  const ic = document.getElementById('ham-icon');
+  mn.classList.toggle('open');
+  ic.className = mn.classList.contains('open') ? 'fas fa-times text-xl' : 'fas fa-bars text-xl';
+}
+function closeMobileNav(){
+  document.getElementById('mobile-nav').classList.remove('open');
+  document.getElementById('ham-icon').className = 'fas fa-bars text-xl';
+}
+
+/* Stats counter */
+function countUp(el, target, duration){
+  let t0 = performance.now();
+  function tick(now){
+    const p = Math.min((now-t0)/duration,1);
+    const eased = 1 - Math.pow(1-p,3);
+    el.textContent = Math.round(eased*target);
+    if(p < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+const statsObs = new IntersectionObserver(function(entries){
+  entries.forEach(function(entry){
+    if(entry.isIntersecting){
+      const card = entry.target;
+      const numEl = card.querySelector('.stat-num');
+      const target = parseInt(card.dataset.target);
+      const delay = parseInt(card.getAttribute('data-aos-delay')||'0');
+      setTimeout(function(){ countUp(numEl,target,1600); }, delay);
+      statsObs.unobserve(card);
+    }
+  });
+},{ threshold:0.3 });
+document.querySelectorAll('.stat-card').forEach(function(c){ statsObs.observe(c); });
+
+/* Skill bars */
+const skillObs = new IntersectionObserver(function(entries){
+  entries.forEach(function(entry){
+    if(entry.isIntersecting){
+      entry.target.querySelectorAll('.skill-bar-fill').forEach(function(bar){
+        bar.style.width = getComputedStyle(bar).getPropertyValue('--bar-w');
+        bar.classList.add('animate');
+      });
+      skillObs.unobserve(entry.target);
+    }
+  });
+},{ threshold:0.4 });
+const skillsContainer = document.getElementById('skills-container');
+if(skillsContainer) skillObs.observe(skillsContainer);
+
+/* Quick Inquiry */
+let quickOpen = false;
+function toggleQuick(){
+  quickOpen = !quickOpen;
+  const p = document.getElementById('quick-popup');
+  if(quickOpen){ p.style.display='block'; setTimeout(function(){ p.classList.add('open'); },10); }
+  else{ p.classList.remove('open'); setTimeout(function(){ p.style.display='none'; },250); }
+}
+function closeQuick(){
+  quickOpen=false;
+  const p=document.getElementById('quick-popup');
+  p.classList.remove('open');
+  setTimeout(function(){ p.style.display='none'; },250);
+}
+function validateQuick(){
+  const name    = document.getElementById('qi-name').value.trim();
+  const contact = document.getElementById('qi-contact').value.trim();
+  const msg     = document.getElementById('qi-message').value.trim();
+  const submit  = document.getElementById('qi-submit');
+  const nameOk    = name.length>0;
+  const contactOk = /^\d{10}$/.test(contact) || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact);
+  const msgOk     = msg.length>=5;
+  document.getElementById('qi-err-name').classList.toggle('visible', !nameOk && name.length>0);
+  document.getElementById('qi-err-contact').classList.toggle('visible', !contactOk && contact.length>0);
+  document.getElementById('qi-err-msg').classList.toggle('visible', !msgOk && msg.length>0);
+  submit.disabled = !(nameOk && contactOk && msgOk);
+}
+function submitQuick(){
+  const name    = document.getElementById('qi-name').value.trim();
+  const contact = document.getElementById('qi-contact').value.trim();
+  const msg     = document.getElementById('qi-message').value.trim();
+  const waMsg   = '*Quick Inquiry*\n*Name:* '+name+'\n*Contact:* '+contact+'\n*Message:* '+msg;
+  window.open('https://wa.me/919054215316?text='+encodeURIComponent(waMsg),'_blank');
+  closeQuick();
+  document.getElementById('qi-name').value='';
+  document.getElementById('qi-contact').value='';
+  document.getElementById('qi-message').value='';
+  document.getElementById('qi-submit').disabled=true;
+}
+
+/* Pulse glow keyframe (also used in CTA strip) — gold, reads against dark backgrounds */
+const styleEl = document.createElement('style');
+styleEl.textContent = '@keyframes pulse-glow-blue{0%,100%{box-shadow:0 4px 24px rgba(201,162,39,.4)}50%{box-shadow:0 4px 44px rgba(201,162,39,.75),0 0 60px rgba(201,162,39,.3)}}';
+document.head.appendChild(styleEl);
+
+/* Page-load wipe cleanup (signature edit-cut reveal) */
+setTimeout(function(){
+  const wipe = document.getElementById('page-wipe');
+  if (wipe) wipe.style.display = 'none';
+}, 1300);
+
+/* Real 3D mouse-tilt for service cards & the founder portrait */
+function attachTilt(el, maxTilt){
+  el.addEventListener('mousemove', function(e){
+    const r = el.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width;
+    const y = (e.clientY - r.top) / r.height;
+    const rotY = (x - 0.5) * maxTilt * 2;
+    const rotX = (0.5 - y) * maxTilt * 2;
+    el.style.transform = 'perspective(1000px) rotateX(' + rotX.toFixed(2) + 'deg) rotateY(' + rotY.toFixed(2) + 'deg) translateY(-4px) scale(1.02)';
+  });
+  el.addEventListener('mouseleave', function(){ el.style.transform = ''; });
+}
+document.querySelectorAll('.tilt-3d').forEach(function(el){
+  attachTilt(el, el.classList.contains('tilt-strong') ? 13 : 7);
+});
+
+/* Hero ambient gold glow follows the cursor */
+(function(){
+  const heroEl = document.getElementById('about-hero');
+  const glowEl = document.getElementById('hero-glow');
+  if (!heroEl || !glowEl) return;
+  heroEl.addEventListener('mousemove', function(e){
+    const r = heroEl.getBoundingClientRect();
+    glowEl.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%');
+    glowEl.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%');
+  });
+})();
+
+</script>
+
+</body>
+</html>
